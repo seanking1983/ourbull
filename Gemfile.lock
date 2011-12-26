@@ -122,11 +122,11 @@ DEPENDENCIES
   annotate!
   factory_girl_rails (= 1.0)
   faker (= 0.3.1)
-  gravatar_image_tag (= 0.1.0)
+  gravatar_image_tag
   rails (= 3.1.0)
   rspec (= 2.0.1)
   rspec-rails (= 2.0.1)
-  spork (~> 0.9.0rc)
+  spork
   sqlite3
   webrat (= 0.7.1)
   will_paginate (~> 3.0.2)
