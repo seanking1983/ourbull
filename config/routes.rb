@@ -1,7 +1,9 @@
 Ourbull::Application.routes.draw do
-  get "home/contact"
+  root :to => 'home#index'
 
-  get "home/about"
+  match '/contact'  => 'home#contact'
+  match '/about'    => 'home#about'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
