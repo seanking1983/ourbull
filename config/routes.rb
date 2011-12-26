@@ -3,6 +3,7 @@ Ourbull::Application.routes.draw do
 
   match '/contact'  => 'home#contact'
   match '/about'    => 'home#about'
+  match '/help'     => 'home#help'
 
 
   # The priority is based upon order of creation:
