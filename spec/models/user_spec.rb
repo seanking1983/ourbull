@@ -21,7 +21,7 @@ describe User do
   end
   
   
-  # email
+  # email general
   
   it "should require a email" do
     no_email_user = User.new(@attr.merge(:email => ""))
@@ -42,7 +42,26 @@ describe User do
   end
   
   
+  # email format
   
+  it "should accept valid email address" do
+    addresses = %w[abc@hawaii.edu THE_USER@harvard.edu random.person@XXX.edu sdbfn-ebrtme@hij.abc.edu user+name@bar.edu sadf@ha.edu sdhj@3com.edu fsdhfj@ffo-df.edu]
+    addresses.each do |address|
+      valid_email_user = User.new(@attr.merge(:email => address))
+      valid_email_user.should be_valid
+    end
+  end
+  
+  it "should reject invalid email address" do
+    addresses = %w[abc@edu THE_USER@harvard. random.person@ abc-def@hij.com random@random.org]
+    addresses.each do |address|
+      valid_email_user = User.new(@attr.merge(:email => address))
+      valid_email_user.should_not be_valid
+    end
+  end
+  
+  
+
   
   
   
