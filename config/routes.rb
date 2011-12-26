@@ -1,9 +1,12 @@
 Ourbull::Application.routes.draw do
   root :to => 'home#index'
+  
+  resources :users
 
   match '/contact'  => 'home#contact'
   match '/about'    => 'home#about'
   match '/help'     => 'home#help'
+  match '/signup'   => 'users#new'
 
 
   # The priority is based upon order of creation:
