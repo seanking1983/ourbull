@@ -8,7 +8,18 @@
 </head>
 <body>
 
-<%= yield %>
-
+	<div class="container">
+	    <div class="span-24 prepend-top last">
+	      <%= render 'layouts/header' %>
+	    </div>
+	    <div class="span-24 last">
+	      <section class="round">
+	        <div><%= yield %></div>
+	      </section>
+	    </div>
+	    <div class="span-24 last prepend-top">
+	      <%= render 'layouts/footer' %>
+	    </div>
+	  </div>
 </body>
 </html>
