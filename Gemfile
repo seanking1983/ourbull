@@ -8,13 +8,13 @@ gem 'will_paginate', '~> 3.0.2'
 gem 'spork'
 
 group :development do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '2.6.1'
   gem 'faker'
-  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'annotate', '2.4.0'
 end
 
 group :test do
-  gem 'rspec'
+  gem 'rspec-rails', '2.6.1'
   gem 'webrat'
   gem 'factory_girl_rails'
 end
