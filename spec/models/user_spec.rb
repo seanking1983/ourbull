@@ -99,6 +99,18 @@ describe User do
       long = "a"* 41
       User.new(@attr.merge(:password => long, :password_confirmation => long)).should_not be_valid
     end
+    
+    # password format
+    
+    it "should reject password with no digit" do
+      no_digit = "abcdefgh"
+      User.new(@attr.merge(:password => no_digit, :password_conformation => no_digit)).should_not be_valid
+    end
+    
+    it "should reject password with no letter" do
+      no_letter = 12345678
+      User.new(@attr.merge(:password => no_letter, :password_conformation => no_letter)).should_not be_valid
+    end
   end
   
 
