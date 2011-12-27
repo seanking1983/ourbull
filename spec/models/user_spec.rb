@@ -13,7 +13,7 @@ describe User do
   end
   
   
-  # name
+  # name general
   
   it "should require a name" do
     no_name_user = User.new(@attr.merge(:name => ""))
