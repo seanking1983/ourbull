@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
   validates :name,    :presence   => true
   validates :email,   :presence   => true,
                       :uniqueness => { :case_sensitive => false },
-                      :format     => { :with => email_regex }
+                      :format     => { :with => email_regex,
+                                       :message => "You must register with a valid .edu email account"}
 
 
 
